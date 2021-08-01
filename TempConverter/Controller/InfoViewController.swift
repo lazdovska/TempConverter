@@ -8,22 +8,20 @@
 import UIKit
 
 class InfoViewController: UIViewController {
-
+    
+    @IBOutlet weak var appInfoLabel: UILabel!
+    @IBOutlet weak var appDescLabel: UILabel!
+    
+    var infoText = ""
+    var appDescText = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        if !infoText.isEmpty && !appDescText.isEmpty{
+            appInfoLabel.text = infoText
+            appDescLabel.text = appDescText
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
